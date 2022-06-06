@@ -1,3 +1,4 @@
+// This function prevents audio fom overlapping
 $(function(){
   $("audio").on("play", function() {
       $("audio").not(this).each(function(index, audio) {
@@ -6,6 +7,7 @@ $(function(){
   });
 });
 
+// This function turns upload into URL so it can be played
 $('input#input1').on('change', function () {
   let sound = $('audio#sound');
   console.log('input1');
@@ -14,7 +16,7 @@ $('input#input1').on('change', function () {
     URL.revokeObjectURL(this.attr());
   })
 });
-
+//This function resets audio to beginning after each click
 $('button#btn1').click(function() {
     var audio = document.getElementById("sound");
     if (audio.paused) {
@@ -23,6 +25,15 @@ $('button#btn1').click(function() {
       audio.currentTime = 0;
     };
 });
+
+// This function puts the file name in assiociated tag
+$('#input1').change(function(e){
+  let filename = e.target.files[0].name;
+  $('.name1').text(filename);
+});
+  function displayfilename() {
+    $('#input1').trigger('change');
+}
 
 $('input#input2').on('change', function () {
   let sound = $('audio#sound2');
@@ -43,11 +54,184 @@ $('button#btn2').click(function() {
     };
 });
 
-$('#input1').change(function(e){
+$('#input2').change(function(e){
   let filename = e.target.files[0].name;
-  $('.name1').text(filename);
+  $('.name2').text(filename);
 });
   function displayfilename() {
-    $('#input1').trigger('change');
+    $('#input2').trigger('change');
 }
 
+// Beginning input3
+$('input#input3').on('change', function () {
+  let sound = $('audio#sound3');
+  console.log('input3');
+  let soundSrc = sound.attr('src', URL.createObjectURL(this.files[0]));
+  soundSrc.on('end', function(){
+    URL.revokeObjectURL(this.attr());
+  })
+});
+
+$('button#btn3').click(function() {
+    console.log('btn3');
+    var audio = document.getElementById("sound3");
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.currentTime = 0;
+    };
+});
+
+$('#input3').change(function(e){
+  let filename = e.target.files[0].name;
+  $('.name3').text(filename);
+});
+  function displayfilename() {
+    $('#input3').trigger('change');
+  };
+// End input 3
+
+// Beginning input4
+$('input#input4').on('change', function () {
+  let sound = $('audio#sound4');
+  console.log('input4');
+  let soundSrc = sound.attr('src', URL.createObjectURL(this.files[0]));
+  soundSrc.on('end', function(){
+    URL.revokeObjectURL(this.attr());
+  })
+});
+
+$('button#btn4').click(function() {
+    console.log('btn4');
+    var audio = document.getElementById("sound4");
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.currentTime = 0;
+    };
+});
+
+$('#input4').change(function(e){
+  let filename = e.target.files[0].name;
+  $('.name4').text(filename);
+});
+  function displayfilename() {
+    $('#input4').trigger('change');
+  };
+// End input 4
+
+// Beginning input 5
+$('input#input5').on('change', function () {
+  let sound = $('audio#sound5');
+  console.log('input5');
+  let soundSrc = sound.attr('src', URL.createObjectURL(this.files[0]));
+  soundSrc.on('end', function(){
+    URL.revokeObjectURL(this.attr());
+  })
+});
+
+$('button#btn5').click(function() {
+    console.log('btn5');
+    var audio = document.getElementById("sound5");
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.currentTime = 0;
+    };
+});
+
+$('#input5').change(function(e){
+  let filename = e.target.files[0].name;
+  $('.name5').text(filename);
+});
+  function displayfilename() {
+    $('#input5').trigger('change');
+  };
+// End input 5
+
+// Beginning input 6
+$('input#input6').on('change', function () {
+  let sound = $('audio#sound6');
+  console.log('input6');
+  let soundSrc = sound.attr('src', URL.createObjectURL(this.files[0]));
+  soundSrc.on('end', function(){
+    URL.revokeObjectURL(this.attr());
+  })
+});
+
+$('button#btn6').click(function() {
+    console.log('btn6');
+    var audio = document.getElementById("sound6");
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.currentTime = 0;
+    };
+});
+
+$('#input6').change(function(e){
+  let filename = e.target.files[0].name;
+  $('.name6').text(filename);
+});
+  function displayfilename() {
+    $('#input6').trigger('change');
+  };
+// End input 8
+
+// Beginning input 7
+$('input#input7').on('change', function () {
+  let sound = $('audio#sound7');
+  console.log('input7');
+  let soundSrc = sound.attr('src', URL.createObjectURL(this.files[0]));
+  soundSrc.on('end', function(){
+    URL.revokeObjectURL(this.attr());
+  })
+});
+
+$('button#btn7').click(function() {
+    console.log('btn7');
+    var audio = document.getElementById("sound7");
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.currentTime = 0;
+    };
+});
+
+$('#input7').change(function(e){
+  let filename = e.target.files[0].name;
+  $('.name7').text(filename);
+});
+  function displayfilename() {
+    $('#input7').trigger('change');
+  };
+// End input 7
+
+// Beginning input 8
+$('input#input8').on('change', function () {
+  let sound = $('audio#sound8');
+  console.log('input8');
+  let soundSrc = sound.attr('src', URL.createObjectURL(this.files[0]));
+  soundSrc.on('end', function(){
+    URL.revokeObjectURL(this.attr());
+  })
+});
+
+$('button#btn8').click(function() {
+    console.log('btn8');
+    var audio = document.getElementById("sound8");
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.currentTime = 0;
+    };
+});
+
+$('#input8').change(function(e){
+  let filename = e.target.files[0].name;
+  $('.name8').text(filename);
+});
+  function displayfilename() {
+    $('#input8').trigger('change');
+  };
+// End input 8
