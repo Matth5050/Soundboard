@@ -6,7 +6,7 @@ $(function(){
   });
 });
 
-$('input#input').on('change', function () {
+$('input#input1').on('change', function () {
   let sound = $('audio#sound');
   console.log('input1');
   let soundSrc = sound.attr('src', URL.createObjectURL(this.files[0]));
@@ -15,7 +15,7 @@ $('input#input').on('change', function () {
   })
 });
 
-$('button#btn').click(function() {
+$('button#btn1').click(function() {
     var audio = document.getElementById("sound");
     if (audio.paused) {
       audio.play();
@@ -42,3 +42,12 @@ $('button#btn2').click(function() {
       audio.currentTime = 0;
     };
 });
+
+$('#input1').change(function(e){
+  let filename = e.target.files[0].name;
+  $('.name1').text(filename);
+});
+  function displayfilename() {
+    $('#input1').trigger('change');
+}
+
