@@ -10,7 +10,6 @@ $(function(){
 // This function turns upload into URL so it can be played
 $('input#input1').on('change', function () {
   let sound = $('audio#sound');
-  console.log('input1');
   let soundSrc = sound.attr('src', URL.createObjectURL(this.files[0]));
   soundSrc.on('end', function(){
     URL.revokeObjectURL(this.attr());
@@ -35,9 +34,9 @@ $('#input1').change(function(e){
     $('#input1').trigger('change');
 }
 
+// Beginning Input2
 $('input#input2').on('change', function () {
   let sound = $('audio#sound2');
-  console.log('input2');
   let soundSrc = sound.attr('src', URL.createObjectURL(this.files[0]));
   soundSrc.on('end', function(){
     URL.revokeObjectURL(this.attr());
@@ -45,7 +44,6 @@ $('input#input2').on('change', function () {
 });
 
 $('button#btn2').click(function() {
-    console.log('btn2');
     var audio = document.getElementById("sound2");
     if (audio.paused) {
       audio.play();
@@ -61,11 +59,11 @@ $('#input2').change(function(e){
   function displayfilename() {
     $('#input2').trigger('change');
 }
+// End Input2
 
 // Beginning input3
 $('input#input3').on('change', function () {
   let sound = $('audio#sound3');
-  console.log('input3');
   let soundSrc = sound.attr('src', URL.createObjectURL(this.files[0]));
   soundSrc.on('end', function(){
     URL.revokeObjectURL(this.attr());
@@ -73,7 +71,6 @@ $('input#input3').on('change', function () {
 });
 
 $('button#btn3').click(function() {
-    console.log('btn3');
     var audio = document.getElementById("sound3");
     if (audio.paused) {
       audio.play();
@@ -94,7 +91,6 @@ $('#input3').change(function(e){
 // Beginning input4
 $('input#input4').on('change', function () {
   let sound = $('audio#sound4');
-  console.log('input4');
   let soundSrc = sound.attr('src', URL.createObjectURL(this.files[0]));
   soundSrc.on('end', function(){
     URL.revokeObjectURL(this.attr());
@@ -102,7 +98,6 @@ $('input#input4').on('change', function () {
 });
 
 $('button#btn4').click(function() {
-    console.log('btn4');
     var audio = document.getElementById("sound4");
     if (audio.paused) {
       audio.play();
@@ -123,7 +118,6 @@ $('#input4').change(function(e){
 // Beginning input 5
 $('input#input5').on('change', function () {
   let sound = $('audio#sound5');
-  console.log('input5');
   let soundSrc = sound.attr('src', URL.createObjectURL(this.files[0]));
   soundSrc.on('end', function(){
     URL.revokeObjectURL(this.attr());
@@ -131,7 +125,6 @@ $('input#input5').on('change', function () {
 });
 
 $('button#btn5').click(function() {
-    console.log('btn5');
     var audio = document.getElementById("sound5");
     if (audio.paused) {
       audio.play();
@@ -152,7 +145,6 @@ $('#input5').change(function(e){
 // Beginning input 6
 $('input#input6').on('change', function () {
   let sound = $('audio#sound6');
-  console.log('input6');
   let soundSrc = sound.attr('src', URL.createObjectURL(this.files[0]));
   soundSrc.on('end', function(){
     URL.revokeObjectURL(this.attr());
@@ -160,7 +152,6 @@ $('input#input6').on('change', function () {
 });
 
 $('button#btn6').click(function() {
-    console.log('btn6');
     var audio = document.getElementById("sound6");
     if (audio.paused) {
       audio.play();
@@ -181,7 +172,6 @@ $('#input6').change(function(e){
 // Beginning input 7
 $('input#input7').on('change', function () {
   let sound = $('audio#sound7');
-  console.log('input7');
   let soundSrc = sound.attr('src', URL.createObjectURL(this.files[0]));
   soundSrc.on('end', function(){
     URL.revokeObjectURL(this.attr());
@@ -189,7 +179,6 @@ $('input#input7').on('change', function () {
 });
 
 $('button#btn7').click(function() {
-    console.log('btn7');
     var audio = document.getElementById("sound7");
     if (audio.paused) {
       audio.play();
@@ -210,7 +199,6 @@ $('#input7').change(function(e){
 // Beginning input 8
 $('input#input8').on('change', function () {
   let sound = $('audio#sound8');
-  console.log('input8');
   let soundSrc = sound.attr('src', URL.createObjectURL(this.files[0]));
   soundSrc.on('end', function(){
     URL.revokeObjectURL(this.attr());
@@ -218,7 +206,6 @@ $('input#input8').on('change', function () {
 });
 
 $('button#btn8').click(function() {
-    console.log('btn8');
     var audio = document.getElementById("sound8");
     if (audio.paused) {
       audio.play();
