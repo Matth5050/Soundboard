@@ -1,3 +1,4 @@
+
 // This function prevents audio fom overlapping
 $(function(){
   $("audio").on("play", function() {
