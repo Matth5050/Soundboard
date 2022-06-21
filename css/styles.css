@@ -75,3 +75,22 @@ a {
 a:hover {
   color:rgb(225, 159, 246);
 }
+
+.aboutContainer {
+  font-size: 20px;
+}
+
+.pfoot {
+  color: #512d72;
+}
+
+.page-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.coffee {
+  color: rgba(134, 188, 239, 0.818);
+}
